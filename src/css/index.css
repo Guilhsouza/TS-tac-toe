@@ -1,0 +1,104 @@
+* {
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-btn: #999;
+    --X-color: #4444ff;
+    --O-color: #ff4444;
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: "Nunito", sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+.elements {
+    font-size: 5rem;
+}
+
+#players {
+    display: grid;
+    justify-content: space-evenly;
+    margin-bottom: 2.5rem;
+    grid-template-areas:
+        "player1 player2";
+}
+
+.the-game {
+    min-height: 60vh;
+    max-width: 70vw;
+    display: grid;
+    margin: auto;
+    grid-template-columns: (3, 1fr);
+    grid-auto-rows: minmax(6rem, auto);
+    grid-template-areas:
+        "element1 element2 element3"
+        "element4 element5 element6"
+        "element7 element8 element9";
+}
+
+.elements {
+    background-color: var(--bg-btn);
+}
+
+.input-btn {
+    border: 0;
+    text-align: center;
+    background-color: var(--bg-btn);
+    font-weight: 800;
+    width: 10rem;
+    height: 8.5rem;
+    font-size: 10rem;
+}
+
+.Xcolor {
+    color: var(--X-color);
+}
+
+.Ocolor {
+    color: var(--O-color);
+}
+
+/* .element1 {
+    grid-area: element1;
+}
+
+.element2 {
+    grid-area: element2;
+}
+
+.element3 {
+    grid-area: element3;
+}
+
+.element4 {
+    grid-area: element4;
+}
+
+.element5 {
+    grid-area: element5;
+}
+
+.element6 {
+    grid-area: element6;
+}
+
+.element7 {
+    grid-area: element7;
+}
+
+.element8 {
+    grid-area: element8;
+}
+
+.element9 {
+    grid-area: element9;
+} */
