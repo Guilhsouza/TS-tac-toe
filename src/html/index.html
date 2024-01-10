@@ -9,47 +9,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
     <title>TS tac toe</title>
     <link rel="stylesheet" href="../css/index.css">
-    <script src="../dist/index.js" defer></script>
+    <script type="module" src="../dist/index.js" defer></script>
+    <script type="module" src="../dist/playerWin.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1 id="title">TS Tac Toe</h1>
+        <h3 id="subtitle">Insira o nome dos jogadores!</h3>
     </header>
 
-    <div id="players">
-        <div id="player1">Jogador 1 (X): </div>
-        <div id="player2">Jogador 2 (O): </div>
-    </div>
+    <section>
+        <div id="players">
+            <div>Jogador 1 (X): <input type="text" id="player1"></div>
+            <div>Jogador 2 (O): <input type="text" id="player2"></div>
+        </div>
 
-    <section class="the-game">
-        <button id="element1" class="elements">
-            <input type="text" id="input1" class="input-btn" disabled>
-        </button>
-        <button id="element2" class="elements">
-            <input type="text" id="input2" class="input-btn" disabled>
-        </button>
-        <button id="element3" class="elements">
-            <input type="text" id="input3" class="input-btn" disabled>
-        </button>
-        <button id="element4" class="elements">
-            <input type="text" id="input4" class="input-btn" disabled>
-        </button>
-        <button id="element5" class="elements">
-            <input type="text" id="input5" class="input-btn" disabled>
-        </button>
-        <button id="element6" class="elements">
-            <input type="text" id="input6" class="input-btn" disabled>
-        </button>
-        <button id="element7" class="elements">
-            <input type="text" id="input7" class="input-btn" disabled>
-        </button>
-        <button id="element8" class="elements">
-            <input type="text" id="input8" class="input-btn" disabled>
-        </button>
-        <button id="element9" class="elements">
-            <input type="text" id="input9" class="input-btn" disabled>
-        </button>
+        <div id="player-turn">
+            <p id="message">O jogador que selecionou o <b>X</b> começa!</p>
+        </div>
+
+        <div class="the-game">
+            <button id="element1" class="elements"></button>
+            <button id="element2" class="elements"></button>
+            <button id="element3" class="elements"></button>
+            <button id="element4" class="elements"></button>
+            <button id="element5" class="elements"></button>
+            <button id="element6" class="elements"></button>
+            <button id="element7" class="elements"></button>
+            <button id="element8" class="elements"></button>
+            <button id="element9" class="elements"></button>
+        </div>
+
+        <p id="message"></p>
     </section>
 </body>
 
