@@ -9,8 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
     <title>TS tac toe</title>
     <link rel="stylesheet" href="../css/index.css">
-    <script type="module" src="../dist/index.js" defer></script>
-    <script type="module" src="../dist/playerWin.js" defer></script>
+    <script type="module" src="../dist/script/index.js"></script>
+    <script type="module" src="../dist/script/clickToPlay.js" defer></script>
+    <script type="module" src="../dist/script/playerWin.js" defer></script>
+    <script type="module" src="../dist/script/playAgain.js" defer></script>
+    <script type="module" src="../dist/utils/caseForWin.js" defer></script>
+    <script type="module" src="../dist/utils/addEvents.js" defer></script>
+    <script type="module" src="../dist/utils/removeEvents.js" defer></script>
 </head>
 
 <body>
@@ -24,6 +29,13 @@
             <div>Jogador 1 (X): <input type="text" id="player1"></div>
             <div>Jogador 2 (O): <input type="text" id="player2"></div>
         </div>
+
+        <div id="score">
+            <p id="player1-victory"><b>Vitorias do jogador:</b> 0</p>
+            <p id="tie"><b>Empates:</b> 0</p>
+            <p id="player2-victory"><b>Vitorias do jogador:</b> 0</p>
+        </div>
+
 
         <div id="player-turn">
             <p id="message">O jogador que selecionou o <b>X</b> começa!</p>
@@ -40,9 +52,9 @@
             <button id="element8" class="elements"></button>
             <button id="element9" class="elements"></button>
         </div>
-
-        <p id="message"></p>
     </section>
+
+    <div id="play-again"></div>
 </body>
 
 </html>
