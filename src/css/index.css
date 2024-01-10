@@ -20,19 +20,29 @@ header {
     text-align: center;
 }
 
-
 #players {
     display: grid;
     justify-content: space-evenly;
     margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
     grid-template-areas:
-        "player1 player2";
+        "player1 player2"
+        "player1-victory player2-victory";
 }
 
 #player-turn {
     text-align: center;
     margin-bottom: 1.4rem;
+}
+
+#score {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2.5rem;
+}
+
+#play-again {
+    text-align: center;
+    margin-top: 7rem;
 }
 
 .elements {
@@ -41,7 +51,7 @@ header {
 
 .the-game {
     max-height: 60vh;
-    max-width: 58vw;
+    max-width: 55vw;
     display: grid;
     margin: auto;
     grid-template-columns: repeat(3, 1fr);
@@ -67,8 +77,17 @@ header {
     color: var(--O-color);
 }
 
-.message {
-    text-align: center;
-    font-size: 4rem;
+.win {
+    font-size: 3rem;
     color: #4bbb4b;
+}
+
+.tie {
+    font-size: 3rem;
+    color: #999;
+}
+
+.play-again-btn {
+    font-size: 2rem;
+    background-color: #999;
 }
