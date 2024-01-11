@@ -13,20 +13,20 @@ export default function playerWin() {
     });
     if (caseForWin(elements, 'X')) {
         responseForWin('win', player1);
-        document.getElementById('player1-victory').innerHTML = `<b>Vitorias do jogador:</b> ${Number(player1victory[(player1victory === null || player1victory === void 0 ? void 0 : player1victory.length) - 1]) + 1}`;
-        return;
+        document.getElementById('player1-victory').innerHTML = `<b>Vitorias do jogador (X):</b> ${Number(player1victory[(player1victory === null || player1victory === void 0 ? void 0 : player1victory.length) - 2] + player1victory[(player1victory === null || player1victory === void 0 ? void 0 : player1victory.length) - 1]) + 1}`;
+        return true;
     }
     ;
     if (caseForWin(elements, 'O')) {
         responseForWin('win', player2);
-        document.getElementById('player2-victory').innerHTML = `<b>Vitorias do jogador:</b> ${Number(player2victory[(player2victory === null || player2victory === void 0 ? void 0 : player2victory.length) - 1]) + 1}`;
-        return;
+        document.getElementById('player2-victory').innerHTML = `<b>Vitorias do jogador (O):</b> ${Number(player2victory[(player2victory === null || player2victory === void 0 ? void 0 : player2victory.length) - 2] + player2victory[(player2victory === null || player2victory === void 0 ? void 0 : player2victory.length) - 1]) + 1}`;
+        return true;
     }
     ;
     if (!elements.includes('')) {
         responseForWin('tie');
-        document.getElementById('tie').innerHTML = `<b>Empates:</b> ${Number(tie[(tie === null || tie === void 0 ? void 0 : tie.length) - 1]) + 1}`;
-        return;
+        document.getElementById('tie').innerHTML = `<b>Empates:</b> ${Number(tie[(tie === null || tie === void 0 ? void 0 : tie.length) - 2] + tie[(tie === null || tie === void 0 ? void 0 : tie.length) - 1]) + 1}`;
+        return true;
     }
     ;
 }

@@ -13,7 +13,9 @@ export default function clickToPlay(ev) {
         element.classList.add('Xcolor');
         message.textContent = `É a vez do jogador ${player2} (O)`;
         value = 'O';
-        playerWin();
+        if (playerWin()) {
+            value = 'X';
+        }
     }
     ;
     if (!element.textContent && value === 'O') {
