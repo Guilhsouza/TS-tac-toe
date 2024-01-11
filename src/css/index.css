@@ -6,14 +6,17 @@
 
 :root {
     font-size: 62.5%;
-    --bg-btn: #999;
-    --X-color: #4444ff;
-    --O-color: #ff4444;
+    --bg-page: #332424;
+    --font-color: #7fdbca;
+    --border-table: #f1f5f9;
+    --result-color: #ffdd6b;
 }
 
 body {
     font-size: 1.8rem;
     font-family: "Nunito", sans-serif;
+    color: var(--font-color);
+    background-color: var(--bg-page);
 }
 
 header {
@@ -42,15 +45,25 @@ header {
 
 #play-again {
     text-align: center;
-    margin-top: 7rem;
+    margin-top: 2rem;
 }
 
-.elements {
-    font-size: 5rem;
+#element4,
+#element5,
+#element6 {
+    border-bottom: 3px solid var(--border-table);
+    border-top: 3px solid var(--border-table);
+}
+
+#element2,
+#element5,
+#element8 {
+    border-right: 3px solid var(--border-table);
+    border-left: 3px solid var(--border-table);
 }
 
 .the-game {
-    max-height: 60vh;
+    min-height: 65vh;
     max-width: 55vw;
     display: grid;
     margin: auto;
@@ -61,33 +74,147 @@ header {
 }
 
 .elements {
-    background-color: var(--bg-btn);
-    font-size: 15rem;
+    background-color: var(--bg-page);
+    font-size: 15.3rem;
     font-weight: 500;
-    width: 23rem;
-    height: 20rem;
+    border: 0;
 }
 
+.play-again-btn {
+    font-size: 2.4rem;
+    border: 2px solid var(--border-table);
+    color: var(--font-color);
+    background-color: var(--bg-page);
+    padding: 0.5rem;
+}
+
+.play-again-btn:hover {
+    background-color: var(--font-color);
+    color: var(--bg-page);
+    transition: .25s;
+}
 
 .Xcolor {
-    color: var(--X-color);
+    color: var(--font-color);
 }
 
 .Ocolor {
-    color: var(--O-color);
+    color: var(--font-color);
 }
 
 .win {
     font-size: 3rem;
-    color: #4bbb4b;
+    color: var(--result-color);
 }
 
 .tie {
     font-size: 3rem;
-    color: #999;
+    color: var(--result-color);
 }
 
-.play-again-btn {
-    font-size: 2rem;
-    background-color: #999;
+@media (min-width: 1920px) {
+    body {
+        font-size: 2rem;
+    }
+
+    .elements {
+        font-size: 16.5rem;
+    }
+
+    .win,
+    .tie,
+    .play-again-btn {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .elements {
+        font-size: 14rem;
+    }
+}
+
+@media (max-width:900px) {
+    .the-game {
+        min-height: 60vh;
+        max-width: 70vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .the-game {
+        min-height: 35vh;
+        max-width: 80vw;
+    }
+
+    .elements {
+        font-size: 6rem;
+    }
+
+    #player-turn {
+        margin-bottom: 1rem;
+    }
+
+    #players {
+        display: grid;
+        margin-top: 2.5rem;
+        grid-template-areas:
+            "player1"
+            "player2";
+    }
+
+    #score {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: grid;
+        grid-template-areas:
+            "player1-victory player2-victory";
+    }
+
+    .win {
+        font-size: 2.3rem;
+    }
+
+    .play-again-btn {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .the-game {
+        min-height: 35vh;
+        max-width: 90vw;
+    }
+
+    .elements {
+        font-size: 6rem;
+    }
+
+    #player-turn {
+        margin-bottom: 1rem;
+    }
+
+    #players {
+        display: grid;
+        margin-top: 2.5rem;
+        grid-template-areas:
+            "player1"
+            "player2";
+    }
+
+    #score {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: grid;
+        grid-template-areas:
+            "player1-victory player2-victory";
+    }
+
+    .win {
+        font-size: 2.3rem;
+    }
+
+    .play-again-btn {
+        font-size: 2rem;
+    }
 }
