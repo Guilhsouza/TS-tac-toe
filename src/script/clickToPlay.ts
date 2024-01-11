@@ -18,7 +18,9 @@ export default function clickToPlay(ev: Event): void {
         (message as HTMLParagraphElement).textContent = `É a vez do jogador ${player2} (O)`;
         value = 'O';
 
-        playerWin();
+        if (playerWin()) {
+            value = 'X'
+        }
     };
 
     if (!element.textContent && value === 'O') {
