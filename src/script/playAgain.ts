@@ -21,7 +21,7 @@ export default function playAgain() {
 
         message.classList.remove('win')
         message.classList.remove('tie')
-        message.innerHTML = 'O jogador que selecionou o <b>X</b> começa!'
+        message.innerHTML = 'O jogador(a) que selecionou o <b>X</b> começa!'
 
         addEvents()
         playAgain?.removeChild(playAgainBtn)

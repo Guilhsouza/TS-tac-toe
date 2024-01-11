@@ -15,7 +15,7 @@ export default function clickToPlay(ev: Event): void {
     if (!element.textContent && value === 'X') {
         element.textContent = value;
         element.classList.add('Xcolor');
-        (message as HTMLParagraphElement).textContent = `É a vez do jogador ${player2} (O)`;
+        (message as HTMLParagraphElement).textContent = `É a vez do jogador(a) ${player2} (O)`;
         value = 'O';
 
         if (playerWin()) {
@@ -26,7 +26,7 @@ export default function clickToPlay(ev: Event): void {
     if (!element.textContent && value === 'O') {
         element.textContent = value;
         element.classList.add('Ocolor');
-        (message as HTMLParagraphElement).textContent = `É a vez do jogador ${player1} (X)`
+        (message as HTMLParagraphElement).textContent = `É a vez do jogador(a) ${player1} (X)`
         value = 'X';
 
         playerWin();

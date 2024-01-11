@@ -7,7 +7,7 @@ export default function response(winOrTie: string, player?: string) {
     message?.classList.add(winOrTie);
 
     if (winOrTie === 'win') {
-        (document.getElementById('message') as HTMLParagraphElement).textContent = `O jogador ${player} venceu!`;
+        (document.getElementById('message') as HTMLParagraphElement).textContent = `O jogador(a) ${player} venceu!`;
     };
 
     if (winOrTie === 'tie') {
